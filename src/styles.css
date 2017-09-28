@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+.btn-aspect {
+  cursor: pointer;
+}
+
+.btn-aspect:hover {
+  background-color: lightgray;
+}
+
+.btn-aspect:hover > * {
+  color: white;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.left-btn {
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  right: 0;
+  top: 0;
+  border-left: 1px solid lightgray;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: table-cell;
+  text-align: center;
+  line-height: 3em;
+}

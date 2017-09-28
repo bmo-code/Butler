@@ -1,0 +1,22 @@
+<div>
+  <div class="card">
+    <div class="card-header pos-relative">
+      <strong>Todo</strong>
+      <div class="btn-aspect left-btn" (click)="addItem()">
+        <i class="fa fa-plus"></i>
+      </div>
+    </div>
+    <div class="card-block p-0">
+      <div class="input-group" *ngFor="let item of todoList.items">
+      <span class="input-group-addon">
+        <input type="checkbox">
+      </span>
+        <input type="text"
+               [(ngModel)]="item.content"
+               class="form-control">
+      </div>
+    </div>
+  </div>
+  <!--<button type="button" class="btn btn-default" (click)="transform()"></button>-->
+</div>
+

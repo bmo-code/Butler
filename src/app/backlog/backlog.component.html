@@ -1,0 +1,43 @@
+<div class="d-flex">
+  <div class="card col-md-4 col-lg-4 col-sm-4 col-xs-12 p-0">
+    <div class="card-header pos-relative">
+      <strong>Do</strong>
+      <div class="btn-aspect left-btn" (click)="addNewItem()">
+        <i class="fa fa-plus"></i>
+      </div>
+    </div>
+    <div class="card-block p-0">
+      <div class="input-group" *ngFor="let doItem of doItemList; let i = index">
+        <input type="text" [(ngModel)]="doItem.content" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-secondary" type="button" (click)="toDoing(i)">Doing</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-md-4 col-lg-4 col-sm-4 col-xs-12 p-0">
+    <div class="card-header pos-relative">
+      <strong>Doing</strong>
+    </div>
+    <div class="card-block p-0">
+      <div class="input-group" *ngFor="let doingItem of doingItemList; let i = index">
+        <input type="text" [(ngModel)]="doingItem.content" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-secondary" type="button" (click)="toDone(i)">Done</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class=" card col-md-4 col-lg-4 col-sm-4 col-xs-12 p-0">
+    <div class="card-header pos-relative">
+      <strong>Done</strong>
+    </div>
+    <div class="card-block p-0">
+      <div class="input-group" *ngFor="let doneItem of doneItemList; let i = index">
+        <input type="text" [(ngModel)]="doneItem.content" class="form-control">
+      </div>
+    </div>
+  </div>
+</div>
